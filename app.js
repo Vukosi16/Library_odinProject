@@ -1,12 +1,16 @@
 const myLibrary = [];
 
-function Book(authour, name, year, publisher){
+class Book{
+ constructor(authour, name, year, publisher){
     this.authour = authour;
     this.name = name;
     this.year = year;
     this.publisher = publisher;
 
+ }
+ 
 }
+
 
 function getBookInfo(){
     const bookName = prompt("Enter the name of the book: ");
@@ -14,9 +18,10 @@ function getBookInfo(){
     const bookYear = prompt("Enter the year the book got published.");
     const bookPublisher = prompt("Enter the name of the publisher");
 
-    return {bookName, bookAuthor, bookYear, bookPublisher};
+    return { bookName, bookAuthor, bookYear, bookPublisher};
 
 }
+
 
 const {bookName, bookAuthor, bookYear, bookPublisher} = getBookInfo();
 
